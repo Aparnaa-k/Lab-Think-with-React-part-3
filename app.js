@@ -1,12 +1,42 @@
 const container = document.getElementById('react-container');
 
 
-const Container = () =>{
-    return React.createElement(`div`,null,`Hey Kalvians! Welcome to React Learning`,
-       React.createElement(`div`,null,`Let's rock and roll`)
-       );
-}
+// const Container = () =>{
+//     return React.createElement(`div`,null,`Hey Kalvians! Welcome to React Learning`,
+//        React.createElement(`div`,null,`Let's rock and roll`)
+//        );
+// }
 
-// Render the Container
+// // Render the Container
 
-ReactDOM.render(React.createElement(Container),container);
+// ReactDOM.render(React.createElement(Container),container);
+
+
+
+// class ReactContainer extends React.Component{
+//     // constructor - to initialize the state 
+  
+//     //render method to render the react dom 
+//       render(){
+//           return React.createElement(`div`,null,`Hey Kalvians`,
+//           React.createElement(`div`,null,`Let's rock and roll with classes`)
+//           );
+//       }
+    
+//   }
+// ReactDOM.render(React.createElement(ReactContainer),container);
+
+
+
+
+class ReactContainer extends React.Component{
+    // JSX tags
+    // JSX there should be one parent element
+      render(){
+          return  React.createElement(`div`,null,`Hey Kalvians`,
+           React.createElement(`div`,null,`Let's rock and roll with classes`)
+          )
+      };  
+  }
+// Direclty pass the component to render
+ReactDOM.render(React.createElement(ReactContainer),container);
